@@ -50,13 +50,9 @@ authorArray = ["John Ronald Reuel Tolkien", "George Raymond Martin", "Joanne Row
 // console.log("titleArray1 = " + titleArray[1] + " and authorArray1 = " + authorArray[1]);
 // console.log("titleArray2 = " + titleArray[2] + " and authorArray2 = " + authorArray[2]);
 
-
-if (i = 0, i > 3, i++) {
-
-    //function to set Title column width, add spaces to start or ... to end if string.length <> width
-    let titleString = titleArray[i];
-    //console.log(titleString.length);
-    function setTitleString() {
+//function to set Title column width, add spaces to start or ... to end if string.length <> width
+let titleString = ""
+function setTitleString() {
         if (titleString.length > 30) {
             return `${titleString.substring(0,(30-3))}...`;
         } else if (titleString.length < 30) {
@@ -66,12 +62,10 @@ if (i = 0, i > 3, i++) {
         }
 
     }
-    //console.log(setTitleString())
 
-    //function to set Author column width, add spaces to start or ... to end if string.length <> width
-    let authorString = authorArray[i];
-    //console.log(authorString.length);
-    function setAuthorString() {
+//function to set Author column width, add spaces to start or ... to end if string.length <> width
+let authorString = ""
+function setAuthorString() {
         if (authorString.length > 20) {
             return `${authorString.substring(0,(20 - 3))}...`;
         } else if (authorString.length < 20) {
@@ -81,8 +75,10 @@ if (i = 0, i > 3, i++) {
         }
 
     }
-    //console.log(setAuthorString())
 
+for (i = 0; i > 3; i++) {
+    titleString = titleArray[i];
+    authorString = authorArray[i];
     //output
     console.log(`| ${setTitleString()} | ${setAuthorString()} |`)
 
