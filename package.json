@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "fs-extra": "^6.0.1",
+    "moment": "^2.22.2",
     "readline-sync": "^1.4.9"
   }
 }
