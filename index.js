@@ -3,7 +3,7 @@ var moment = require('moment');
 var Book = require('/Work/Training/Further-JS/2-Strings/bookclass.js')
 
 ////////////////////////
-//PROMGRAMME STARTS//
+//PROGRAMME STARTS//
 //////////////////////
 
 // arrays of titles and authors
@@ -83,9 +83,23 @@ console.log(line())
 //each book
 let pubString = "";
 let pubFormatted = "";
+
+//Deals with array
 for (i = 0; i < publishedArray.length; i++) {
     titleString = titleArray[i];
     authorString = authorArray[i];
+    pubString = publishedArray[i];
+    pubFormatted = moment(pubString, "DD/MM/YYYY").format("DD MMM YYYY")
+    //output
+    //console.log(`| ${publishedArray[i]} | ${setTitleString()} | ${setAuthorString()} |`)
+    console.log(`| ${pubFormatted}  | ${setTitleString()} | ${setAuthorString()} |`)
+    console.log(line())
+}
+
+//Deals with Class
+for (i = 0; i < publishedArray.length; i++) {
+    titleString = Book.title
+    authorString = Book.author
     pubString = publishedArray[i];
     pubFormatted = moment(pubString, "DD/MM/YYYY").format("DD MMM YYYY")
     //output
